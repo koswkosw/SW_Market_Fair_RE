@@ -1,69 +1,154 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>이미지와 링크</title>
-        <style>
-            html, body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-                overflow-x: hidden;
-            }
-            picture {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제3회 SW Market Fair</title>
+
+    <meta property="og:title" content="제 3회 SW Market Fair 참가안내">
+    <meta property="og:url" content="https://koswkosw.github.io/SW_Market_Fair_RE/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.ibb.co/3hqSgvK/img06.jpg">
+    <meta property="og:description" content="제3회 SW Market Fair를 개최합니다!">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            background-color: #F9F7FB;
+        }
+
+        picture {
+            display: block;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        /* 모바일 전용 스타일 */
+        @media (max-width: 600px) {
+            .mobile-only {
                 display: block;
-                width: 100%;
-                margin: 0;
             }
-            img {
-                width: 100%;
-                height: auto;
+
+            .pc-only {
+                display: none;
+            }
+
+            .row-layout {
+                display: flex;
+                justify-content: center;
+                gap: 0;
+            }
+
+            .row-layout picture {
+                flex: 1;
+            }
+        }
+
+        /* PC 전용 스타일 */
+        @media (min-width: 601px) {
+            .mobile-only {
+                display: none;
+            }
+
+            .pc-only {
                 display: block;
-                margin: 0;
             }
-            a img {
-                cursor: pointer;
-            }
-        </style>
-    </head>
-    <body>
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PC 전용 콘텐츠 -->
+    <div class="pc-only">
         <picture>
-            <source srcset="https://i.ibb.co/72y7365/1.jpg" media="(max-width: 600px)">
-            <img src="file/1.jpg" alt="이미지 1">
+                <img src="https://koswkosw.github.io/SW_Market_Fair_RE/file/1.jpg" alt="PC 이미지 1">
+            </a>
         </picture>
         <picture>
-            <source srcset="https://i.ibb.co/TgCS8NG/2.jpg" media="(max-width: 600px)">
-            <img src="file/2.jpg" alt="이미지 2">
+                <img src="https://koswkosw.github.io/SW_Market_Fair_RE/file/2.jpg" alt="PC 이미지 2">
+            </a>
         </picture>
         <picture>
-            <source srcset="https://i.ibb.co/hgcmLNz/3.jpg" media="(max-width: 600px)">
-            <img src="file/3.jpg" alt="이미지 3">
+                <img src="https://koswkosw.github.io/SW_Market_Fair_RE/file/3.jpg" alt="PC 이미지 3">
+            </a>
         </picture>
-        <a href="https://blog.kakaocdn.net/dn/bpbhs3/btsLUpzXbgF/PuosxH1XMhYHwmd9CzfyNk/%5B%EB%B6%99%EC%9E%84%5D%20%EC%A0%9C3%ED%9A%8C%20%E3%80%8CSW%20Market%20Fair%20%E3%80%8D%20%EB%B0%9C%ED%91%9C%20%EC%B0%B8%EA%B0%80%EC%8B%A0%EC%B2%AD%EC%84%9C.hwp" target="_blank" download>
+        <picture>
+            <a href="https://blog.kakaocdn.net/dn/bpbhs3/btsLUpzXbgF/PuosxH1XMhYHwmd9CzfyNk/%5B붙임%5D%20제3회%20「SW%20Market%20Fair%20」%20발표%20참가신청서.hwp?attach=1&knm=tfile.hwp" target="_self">
+                <img src="https://koswkosw.github.io/SW_Market_Fair_RE/file/4.jpg" alt="PC 이미지 4">
+            </a>
+        </picture>
+        <picture>
+                <img src="https://koswkosw.github.io/SW_Market_Fair_RE/file/5.jpg" alt="PC 이미지 5">
+            </a>
+        </picture>
+        <picture>
+            <a href="https://blog.kakaocdn.net/dn/Y2yO0/btsLS5n8LTU/m8bnjvj57bS0iYIHBs40SK/%5B붙임%5D%20제3회%20「SW%20Market%20Fair%20」%20전시부스%20참가신청서.hwp?attach=1&knm=tfile.hwp" target="_self">
+                <img src="https://koswkosw.github.io/SW_Market_Fair_RE/file/6.jpg" alt="PC 이미지 6">
+            </a>
+        </picture>
+        <picture>
+                <img src="https://koswkosw.github.io/SW_Market_Fair_RE/file/7.jpg" alt="PC 이미지 7">
+            </a>
+        </picture>
+        <picture>
+                <img src="https://koswkosw.github.io/SW_Market_Fair_RE/file/8.jpg" alt="PC 이미지 8">
+            </a>
+        </picture>
+    </div>
+
+    <!-- 모바일 전용 콘텐츠 -->
+    <div class="mobile-only">
+        <picture>
+            <img src="https://github.com/koswkosw/SW_Market_Fair_RE/blob/main/file/p1/m_p1_1.png?raw=true" alt="모바일 이미지 1">
+        </picture>
+
+        <div class="row-layout">
             <picture>
-                <source srcset="https://i.ibb.co/5TFpGQs/4.jpg" media="(max-width: 600px)">
-                <img src="file/4.jpg" alt="이미지 4">
+                <img src="https://github.com/koswkosw/SW_Market_Fair_RE/blob/main/file/p1/m_p1_2.png?raw=true" alt="모바일 이미지 2" id="openNewTab2">
             </picture>
-        </a>
-        <picture>
-            <source srcset="https://i.ibb.co/VCYGNT4/5.jpg" media="(max-width: 600px)">
-            <img src="file/5.jpg" alt="이미지 5">
-        </picture>
-        <a href="https://blog.kakaocdn.net/dn/Y2yO0/btsLS5n8LTU/m8bnjvj57bS0iYIHBs40SK/%5B%EB%B6%99%EC%9E%84%5D%20%EC%A0%9C3%ED%9A%8C%20%E3%80%8CSW%20Market%20Fair%20%E3%80%8D%20%EC%A0%84%EC%8B%9C%EB%B6%80%EC%8A%A4%20%EC%B0%B8%EA%B0%80%EC%8B%A0%EC%B2%AD%EC%84%9C.hwp" target="_blank" download>
             <picture>
-                <source srcset="https://i.ibb.co/728HXS6/6.jpg" media="(max-width: 600px)">
-                <img src="file/6.jpg" alt="이미지 6">
+                <img src="https://github.com/koswkosw/SW_Market_Fair_RE/blob/main/file/p1/m_p1_3.png?raw=true" alt="모바일 이미지 3" id="openNewTab3">
             </picture>
-        </a>
+        </div>
+
         <picture>
-            <source srcset="https://i.ibb.co/9YVLCF7/7.jpg" media="(max-width: 600px)">
-            <img src="file/7.jpg" alt="이미지 7">
+            <a href="https://blog.kakaocdn.net/dn/bIDgeF/btsLVLB4QRz/weDhoFO6CdJqlUNcZj2Wm1/%5B붙임%5D%20제3회%20「SW%20Market%20Fair%20」%20발표%20및%20전시부스%20참가신청서.zip?attach=1&knm=tfile.zip" target="_self">
+                <img src="https://github.com/koswkosw/SW_Market_Fair_RE/blob/main/file/p1/m_p1_4.png?raw=true" alt="모바일 이미지 4">
+            </a>
         </picture>
         <picture>
-            <source srcset="https://i.ibb.co/0rdkwSZ/8.jpg" media="(max-width: 600px)">
-            <img src="file/8.jpg" alt="이미지 8">
+            <img src="https://github.com/koswkosw/SW_Market_Fair_RE/blob/main/file/p1/m_p1_5.png?raw=true" alt="모바일 이미지 5" id="openNewTab5">
         </picture>
-    </body>
+        <picture>
+            <img src="https://github.com/koswkosw/SW_Market_Fair_RE/blob/main/file/p1/p_p1_6.png?raw=true" alt="모바일 이미지 6">
+        </picture>
+    </div>
+
+    <script>
+        // 모바일 이미지 클릭 시 새 창 열기
+        document.getElementById('openNewTab2').addEventListener('click', function () {
+            window.open('p1.html', '_self', 'width=800,height=600');
+        });
+
+        document.getElementById('openNewTab3').addEventListener('click', function () {
+            window.open('p2.html', '_self', 'width=800,height=600');
+        });
+
+        document.getElementById('openNewTab5').addEventListener('click', function () {
+            window.open('p3.html', '_self', 'width=800,height=600');
+        });
+    </script>
+
+</body>
 </html>
